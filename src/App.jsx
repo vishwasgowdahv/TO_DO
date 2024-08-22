@@ -5,18 +5,18 @@ import TodoITem from './components/TodoITem'
 import TodoContext from './contexts/TodoContext'
 
 function App() {
-  const{todos}=useContext(TodoContext)
+  const{todos,deletealltodo}=useContext(TodoContext)
   return (
    
     <>
     <div className="main">
       <AddTodo/>
       {(todos.length>0)?
-      todos.map((e)=>(
+      <>{todos.map((e)=>(
         <div key={e.id} >
           <TodoITem todos={e}/>
         </div>
-      )):<div>No Todos</div> }
+      ))}  <button className='deletealltodo' onClick={deletealltodo}>CLEAR ALL</button> </>:<div>No Todos</div> }
       </div>
     </>
   )

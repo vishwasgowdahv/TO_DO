@@ -5,3 +5,14 @@
     align-items: center;
     gap: 20px;
 }
+.deletealltodo{
+    padding: 10px;
+    background-color: lightsalmon;
+    border-radius: 20px;
+    border: 1px solid grey;
+    cursor: pointer;
+}
+.deletealltodo:hover{
+    background-color: rgb(255, 90, 25);
+
+}

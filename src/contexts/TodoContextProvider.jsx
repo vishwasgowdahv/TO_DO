@@ -30,7 +30,10 @@ export default function TodoContextProvider({ children }) {
     setTodos(temptodos);
   }
   function deletealltodo() {
+    const confi = confirm("Are you sure want to delete ALL TO DO'S");
+    if (confi) {
     setTodos([]);
+    }
   }
   function toggleCompleted(id) {
     setTodos((prev) =>
